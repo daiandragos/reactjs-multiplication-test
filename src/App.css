@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Jost", sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: #f73859;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  width: 25%;
+  line-height: 1;
+  height: 100%;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background: #111;
+  display: flex;
+}
+
+.math-test {
+  width: 100%;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #283149;
+}
+
+.math-test .expression-output {
+  width: 100%;
+  background: #111727;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.math-test .expression-output p {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.math-test .time {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 2px solid #f73859;
+  color: #fff;
+  display: flex;
+}
+
+.math-test .time p {
+  margin: auto;
+  font-size: 60px;
+  line-height: 1;
+}
+
+.math-test .values {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+
+.math-test .values input {
+  width: 75%;
+  height: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: #111727;
+  color: #fff;
+}
+
+.math-test .values input::placeholder {
+  color: #fff;
+}
+
+/* time animation */
+@keyframes scaleNumber {
+  0% {
+    transform: scale(1.25);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.results {
+  width: 100%;
+  max-width: 540px;
+  background: #283149;
+  display: flex;
+  flex-direction: column;
+}
+
+.results .title {
+  padding: 20px;
+  background: #111727;
+  color: #fff;
+}
+
+.results .title p {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.results .results-container {
+  width: 100%;
+  display: flex;
+  height: 80vh;
+  max-height: 80vh;
+  overflow: auto;
+  margin: auto;
+}
+
+.results .results-container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.results .results-container::-webkit-scrollbar-thumb {
+  background: #f73859;
+  border-radius: 50px;
+  outline: 1px solid slategrey;
+}
+
+.results .results-container .correct-results,
+.results .results-container .wrong-results {
+  width: 100%;
+  max-width: 50%;
+  padding: 14px;
+}
+
+.results .results-container .correct-results .result,
+.results .results-container .wrong-results .result {
+  width: 100%;
+  padding: 14px;
+  background: #f73859;
+  color: #fff;
+  border-radius: 4px;
+  word-wrap: break-word;
+}
+.results .results-container .correct-results .result {
+  background: rgb(65, 190, 65);
+}
+.results .results-container .wrong-results .result {
+  background: #f73859;
+}
+
+.results .results-container .correct-results .result:not(:last-of-type),
+.results .results-container .wrong-results .result:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 580px) {
+  button {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1210px) {
+  .App {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 14px;
+  }
+  .App .container {
+    max-width: 700px;
+  }
+  .results {
+    max-width: 700px;
+    margin: 40px 0;
+  }
+}
