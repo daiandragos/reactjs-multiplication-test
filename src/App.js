@@ -49,6 +49,9 @@ const App = () => {
     setWrongResults([]);
     setCountCorrect(0);
     setInputValue("");
+    setTimeout(() => {
+      document.getElementById("result_input").focus();
+    }, 0);
   };
 
   useEffect(() => {
